@@ -1,2 +1,2 @@
-# semester-ichi
+# TUGAS TUGAS KULIAH SAYA
 tugas2 dri smt 1

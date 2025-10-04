@@ -1,2 +1,1 @@
-# TUGAS TUGAS KULIAH SAYA
-tugas2 dri smt 1
+my main portfolio i guess

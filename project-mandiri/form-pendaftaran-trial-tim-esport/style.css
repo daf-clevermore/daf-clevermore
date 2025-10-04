@@ -1,0 +1,43 @@
+h1, p{
+    text-align: center;
+}
+
+fieldset{
+    width: 50vw;
+    margin: 4vh auto;
+}
+
+fieldset *{
+    margin: auto;
+}
+
+input, select, textarea{
+    margin-bottom: 15px;
+}
+
+.block{
+    display: block;
+}
+
+#nickname{
+    width: 150px;
+}
+
+#id{
+    width: 90px;
+}
+
+#server{
+    width: 50px;
+    text-align: center;
+}
+
+.star{
+    width: 30px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

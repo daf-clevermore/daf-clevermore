@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Trial Netherist</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Form Pendaftaran Trial Netherist</h1>
+    <p>Selamat datang di pendaftaran Trial Tim Esports MLBB Netherist! 🚀<br>Kalau lu ngerasa jago, punya mental baja, dan siap push bareng, ini saatnya buktiin. Isi data lo sekarang, siapa tau lo yang bakal jadi bagian dari squad Netherist selanjutnya! 😏</p>
+    <form action="trial_form.php" method="post">
+        <fieldset class="personal">
+            <legend>Identitas Diri</legend>
+            <label class="block" for="full-name">Nama Lengkap</label>
+            <input required type="text" name="full-name" placeholder="Nama Lengkap" id="full-name" class="inp">
+
+            <label class="block" for="nickname">In-Game Nickname</label>
+            <input required type="text" name="nickname" placeholder="Nickname" id="nickname" class="inp">
+
+            <label class="block" for="id">ID</label>
+            <input required type="number" placeholder="ID" id="id" class="inp">
+            <input required type="number" placeholder="Server" id="server" class="inp">
+
+            <label class="block" for="age">Usia</label>
+            <input required type="number" placeholder="Usia" id="age" class="inp" min="16" max="30">
+        </fieldset>
+
+        <fieldset class="contact">
+            <legend>Kontak Pribadi</legend>
+            <label for="email" class="block">Email</label>
+            <input required type="email" name="email" id="email">
+
+            <label for="whatsapp" class="block">No. WhatsApp</label>
+            <input required type="tel" name="whatsapp">
+
+            <label for="instagram" class="block">Instagram</label>
+            <input required type="text">
+        </fieldset>
+
+        <fieldset>
+            <legend>Role & Pengalaman</legend>
+            <label for="role" class="block">Pilih Role terbaikmu!</label>
+            <select required name="role" id="role">
+                <option value="none" disabled selected>Pilih Role!</option>
+                <option value="roamer">Roamer</option>
+                <option value="jungler">Jungler</option>
+                <option value="mid-laner">Mid Laner</option>
+                <option value="gold-laner">Gold Laner</option>
+                <option value="exp-laner">EXP Laner</option>
+            </select>
+
+            <label class="block">Informasi Statistik</label>
+            <label for="highest-star">Rank tertinggi sepanjang masa: Mythic Immortal</label>
+            <input required type="number" name="highest-star" class="star" min="200">
+            <label>Star</label>
+
+            <br>
+            <label for="current-star">Rank tertinggi Season ini: Mythic Immortal</label>
+            <input required type="number" name="current-star" class="star" min="100">
+            <label>Star</label>
+
+            <br>
+            <label for="all-time-winrate">Winrate Ranked All Season:</label>
+            <input required type="number" name="all-time-winrate" id="all-time-winrate" min="75.00" max="100.00" step="0.01">
+
+            <label for="experience" class="block">Pengalaman kamu apa aja?</label>
+            <textarea name="experience" id="" cols="30" rows="10" placeholder="Ceritakan pengalaman terbaikmu di sini..."></textarea>
+        
+            <label for="document" class="block">Upload bukti kenapa kita harus terima kamu! (wajib menyertakan Screenshot akun pribadi)</label>
+            <input required type="file" name="document" id="document" multiple accept=".pdf, .jpg, .png">
+        </fieldset>
+    </form>
+</body>
+</html>

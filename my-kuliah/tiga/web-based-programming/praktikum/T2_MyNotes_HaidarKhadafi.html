@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Notes App</title>
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <h1>My Notes</h1>
+            <ul>
+                <li><a href="#buat">Buat Catatan</a></li>
+                <li><a href="#daftar">Daftar Catatan</a></li>
+                <li><a href="#tentang">Tentang</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="buat">
+            <h2>Buat Catatan Baru</h2>
+
+            <form>
+                <label for="judul">Judul:</label><br>
+                <input id="judul" name="judul" type="text" placeholder="Masukkan judul catatan"><br><br>
+
+                <label for="catatan">Isi Catatan:</label><br>
+                <textarea id="catatan" name="isi-catatan" placeholder="Tulis catatanmu di sini..." rows="4" cols="40"></textarea><br><br>
+
+                <button type="submit">Simpan</button>
+            </form>
+        </section>
+
+        <section id="daftar">
+            <h2>Daftar Catatan</h2>
+
+            <article>
+                <h3>Belajar HTML</h3>
+                <p>Mempelajari dasar-dasar HTML dan struktur halaman web.</p>
+            </article>
+
+            <article>
+                <h3>Membaca Dokumentasi HTML</h3>
+                <p>Memahami tag semantik dan penggunaannya dalam struktur website modern.</p>
+            </article>
+
+            <article>
+                <h3>Mengerjakan Tugas HTML</h3>
+                <p>Membuat halaman web sederhana menggunakan tag semantik seperti &lt;header&gt;, &lt;main&gt;, dan &lt;footer&gt;.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>Tentang Aplikasi</h2>
+            <p><strong>My Notes App</strong> adalah aplikasi sederhana berbasis web untuk mencatat ide, tugas, atau rencana harian. Pada versi ini, kamu dapat menulis dan melihat daftar catatan secara manual. Nantinya, aplikasi ini akan dikembangkan menggunakan CSS dan JavaScript agar lebih interaktif&mdash;misalnya, tombol <i>Simpan</i> akan menambahkan catatan baru secara otomatis.</p>
+        </section>
+    </main>
+    
+    <footer id="tentang">
+        <p>&copy; 2025 My Notes App</p>
+    </footer>
+</body>
+</html>

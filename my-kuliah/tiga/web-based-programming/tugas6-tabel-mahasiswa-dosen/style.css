@@ -1,0 +1,151 @@
+/* ====== GLOBAL STYLE ====== */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f7f9fc;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 30px;
+  color: #222;
+}
+
+.container {
+  width: 80%;
+  max-width: 800px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* ====== NAV LINKS ====== */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: 600;
+}
+
+.nav a:hover {
+  color: #0056b3;
+}
+
+.nav a[class="btn"] {
+    color: #fff;
+}
+
+/* ====== TABLE ====== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 10px 12px;
+  text-align: left;
+}
+
+table th {
+  background: #007bff;
+  color: white;
+  text-transform: capitalize;
+}
+
+table a {
+    color: white;
+}
+
+table a:hover {
+    color: lightgray;
+}
+
+table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+table tr:hover {
+  background-color: #f1f5ff;
+}
+
+/* ====== BUTTONS ====== */
+button, .btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+button:hover, .btn:hover {
+  background-color: #0056b3;
+}
+
+/* ====== FORM CONTAINER ====== */
+.form-box {
+  width: 80%;
+  max-width: 500px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  font-weight: 600;
+  color: #444;
+}
+
+input[type="text"], input[type="email"] {
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+}
+
+
+/* ====== SEARCH ====== */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.search-bar input {
+  width: 200px;
+  border-radius: 6px 0 0 6px;
+}
+
+.search-bar button {
+  border-radius: 0 6px 6px 0;
+}

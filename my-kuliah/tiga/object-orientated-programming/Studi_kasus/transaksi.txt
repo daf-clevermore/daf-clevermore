@@ -1,0 +1,29 @@
+========================================
+LAPORAN TRANSAKSI BANK
+========================================
+
+Rekening: 1001
+Pemilik: Haidar Khadafi
+Saldo Akhir: Rp4000000
+----------------------------------------
+  1. SALDO_AWAL | Rp5000000 | Saldo: Rp5000000 | Wed Nov 26 00:58:33 2025
+     Ket: Pembukaan rekening
+  2. TRANSFER_KELUAR | Rp1000000 | Saldo: Rp4000000 | Wed Nov 26 00:59:24 2025
+     Ket: Transfer ke 1002
+
+Rekening: 1002
+Pemilik: Lionel Messi
+Saldo Akhir: Rp4000000
+----------------------------------------
+  1. SALDO_AWAL | Rp3000000 | Saldo: Rp3000000 | Wed Nov 26 00:58:33 2025
+     Ket: Pembukaan rekening
+  2. TRANSFER_MASUK | Rp1000000 | Saldo: Rp4000000 | Wed Nov 26 00:59:24 2025
+     Ket: Transfer dari 1001
+
+Rekening: 1003
+Pemilik: Ahmad Dahlan
+Saldo Akhir: Rp2000000
+----------------------------------------
+  1. SALDO_AWAL | Rp2000000 | Saldo: Rp2000000 | Wed Nov 26 00:58:33 2025
+     Ket: Pembukaan rekening
+

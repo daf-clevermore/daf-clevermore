@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="formWrapper">
+            <div class="formHeader">
+                <h1>Hubungi Kami</h1>
+                <p>Isi formulir di bawah ini untuk mengirim pesan kepada kami</p>
+            </div>
+
+            <form id="contactForm" class="contactForm">
+                <div class="formGroup">
+                    <label for="nameInput">Nama Lengkap</label>
+                    <input type="text" id="nameInput" name="name" placeholder="Masukkan nama lengkap Anda"
+                        autocomplete="name">
+                </div>
+
+                <div class="formGroup">
+                    <label for="emailInput">Email</label>
+                    <input type="email" id="emailInput" name="email" placeholder="contoh@email.com"
+                        autocomplete="email">
+                </div>
+
+                <div class="formGroup">
+                    <label for="messageInput">Pesan</label>
+                    <textarea id="messageInput" name="message" rows="5"
+                        placeholder="Tulis pesan Anda di sini (minimal 10 karakter)"></textarea>
+                </div>
+
+                <div id="errorMessage" class="errorMessage"></div>
+
+                <button type="submit" id="submitButton" class="submitButton">
+                    <span class="buttonText">Kirim Pesan</span>
+                    <span class="buttonIcon">→</span>
+                </button>
+            </form>
+        </div>
+
+        <div id="resultBox" class="resultBox hidden">
+            <div class="resultHeader">
+                <h2>Pesan Terkirim!</h2>
+                <button id="closeResult" class="closeButton">×</button>
+            </div>
+            <div class="resultContent">
+                <div class="resultItem">
+                    <span class="resultLabel">Nama:</span>
+                    <span id="resultName" class="resultValue"></span>
+                </div>
+                <div class="resultItem">
+                    <span class="resultLabel">Email:</span>
+                    <span id="resultEmail" class="resultValue"></span>
+                </div>
+                <div class="resultItem">
+                    <span class="resultLabel">Pesan:</span>
+                    <span id="resultMessage" class="resultValue"></span>
+                </div>
+            </div>
+        </div>
+
+        <nav class="pageNav">
+            <a href="../Soal 2/index.html" class="navButton prevButton">← Soal 2</a>
+            <a href="../Soal 4/index.html" class="navButton nextButton">Soal 4 →</a>
+        </nav>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

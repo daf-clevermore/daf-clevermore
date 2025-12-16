@@ -1,0 +1,316 @@
+:root {
+    --primaryColor: #FF8F4C;
+    --primaryDark: #e67a38;
+    --accentColor: #5a9aa8;
+    --bgGray: #26282f;
+    --bgColor: #1d1e22;
+    --textPrimary: #F2F2F2;
+    --textSecondary: #c5c5c5;
+    --shadowSm: 0 2px 4px rgba(0, 0, 0, 0.3);
+    --shadowLg: 0 10px 30px rgba(0, 0, 0, 0.5);
+    --radiusSm: 8px;
+    --transitionNormal: 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lexend', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bgColor);
+    color: var(--textPrimary);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+
+.container {
+    max-width: 700px;
+    width: 100%;
+}
+
+/* Header Styles */
+.appHeader {
+    background: var(--primaryColor);
+    color: var(--textPrimary);
+    padding: 2rem;
+    text-align: center;
+    border-radius: var(--radiusSm);
+    box-shadow: var(--shadowLg);
+    margin-bottom: 2rem;
+}
+
+.appHeader h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.appHeader p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* Input Section */
+.inputSection {
+    background: var(--bgGray);
+    padding: 2rem;
+    border-radius: var(--radiusSm);
+    box-shadow: var(--shadowLg);
+    margin-bottom: 2rem;
+    border: 2px solid var(--primaryColor);
+}
+
+.inputGroup {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+#activityInput {
+    flex: 1;
+    min-width: 200px;
+    padding: 0.875rem 1rem;
+    border: 2px solid var(--primaryColor);
+    border-radius: var(--radiusSm);
+    font-family: inherit;
+    font-size: 1rem;
+    color: var(--textPrimary);
+    background: var(--bgColor);
+    transition: all var(--transitionNormal);
+    outline: none;
+}
+
+#activityInput:focus {
+    border-color: var(--accentColor);
+    box-shadow: 0 0 0 4px rgba(90, 154, 168, 0.2);
+    transform: translateY(-2px);
+}
+
+#activityInput:hover {
+    border-color: var(--accentColor);
+}
+
+.addButton {
+    padding: 0.875rem 1.5rem;
+    background: var(--primaryColor);
+    color: var(--textPrimary);
+    border: none;
+    border-radius: var(--radiusSm);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transitionNormal);
+    box-shadow: var(--shadowLg);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: inherit;
+}
+
+.addButton:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadowLg);
+    background: var(--accentColor);
+}
+
+.addButton:active {
+    transform: translateY(0);
+}
+
+.addButton span {
+    font-size: 1.2rem;
+}
+
+/* List Section */
+.listSection {
+    background: var(--bgGray);
+    padding: 2rem;
+    border-radius: var(--radiusSm);
+    box-shadow: var(--shadowLg);
+    border: 2px solid var(--primaryColor);
+    min-height: 300px;
+}
+
+.listHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--accentColor);
+}
+
+.listHeader h2 {
+    font-size: 1.5rem;
+    color: var(--textPrimary);
+}
+
+.itemCount {
+    background: var(--accentColor);
+    color: var(--textPrimary);
+    padding: 0.4rem 1rem;
+    border-radius: var(--radiusSm);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* Activity List */
+.activityList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.emptyMessage {
+    text-align: center;
+    color: var(--textSecondary);
+    font-size: 1.1rem;
+    padding: 3rem 1rem;
+    font-style: italic;
+}
+
+.activityItem {
+    background: var(--bgColor);
+    padding: 1rem 1.5rem;
+    margin-bottom: 0.75rem;
+    border-radius: var(--radiusSm);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    border-left: 4px solid var(--primaryColor);
+    transition: all var(--transitionNormal);
+}
+
+.activityItem:hover {
+    transform: translateX(5px);
+    box-shadow: var(--shadowSm);
+}
+
+.activityText {
+    flex: 1;
+    color: var(--textPrimary);
+    font-size: 1rem;
+    word-break: break-word;
+}
+
+.deleteButton {
+    background: transparent;
+    color: var(--primaryColor);
+    border: 2px solid var(--primaryColor);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radiusSm);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transitionNormal);
+    font-family: inherit;
+    white-space: nowrap;
+}
+
+.deleteButton:hover {
+    background: var(--accentColor);
+    color: var(--textPrimary);
+    transform: scale(1.05);
+    border-color: var(--accentColor);
+}
+
+.deleteButton:active {
+    transform: scale(0.95);
+}
+
+/* Page Navigator */
+.pageNav {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.navButton {
+    padding: 0.5rem 0;
+    background: transparent;
+    color: var(--textSecondary);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-align: center;
+    transition: all var(--transitionNormal);
+}
+
+.navButton:hover {
+    color: var(--primaryColor);
+}
+
+.navButton:active {
+    color: var(--accentColor);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+
+    .appHeader h1 {
+        font-size: 1.5rem;
+    }
+
+    .appHeader p {
+        font-size: 0.9rem;
+    }
+
+    .inputSection,
+    .listSection {
+        padding: 1.5rem;
+    }
+
+    .inputGroup {
+        flex-direction: column;
+    }
+
+    #activityInput {
+        min-width: 100%;
+    }
+
+    .addButton {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .listHeader {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: flex-start;
+    }
+
+    .activityItem {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .deleteButton {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .appHeader {
+        padding: 1.5rem;
+    }
+
+    .listHeader h2 {
+        font-size: 1.25rem;
+    }
+
+    .activityItem {
+        padding: 1rem;
+    }
+}

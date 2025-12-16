@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="appHeader">
+            <h1>Daftar Aktivitas</h1>
+            <p>Kelola aktivitas harianmu dengan mudah</p>
+        </header>
+
+        <div class="inputSection">
+            <div class="inputGroup">
+                <input type="text" id="activityInput" placeholder="Masukkan aktivitas baru..." autocomplete="off">
+                <button id="addButton" class="addButton">
+                    + Tambah Aktivitas
+                </button>
+            </div>
+        </div>
+
+        <div class="listSection">
+            <div class="listHeader">
+                <h2>Daftar Aktivitas</h2>
+                <span id="itemCount" class="itemCount">0 aktivitas</span>
+            </div>
+            <ul id="activityList" class="activityList">
+            </ul>
+        </div>
+
+        <nav class="pageNav">
+            <a href="../Soal 3/index.html" class="navButton prevButton">← Soal 3</a>
+            <a href="../Soal 5/index.html" class="navButton nextButton">Soal 5 →</a>
+        </nav>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,265 @@
+/* CSS Variables */
+:root {
+    --primaryColor: #FF8F4C;
+    --primaryDark: #e67a38;
+    --accentColor: #5a9aa8;
+    --bgGray: #26282f;
+    --bgColor: #1d1e22;
+    --textPrimary: #F2F2F2;
+    --textSecondary: #c5c5c5;
+    --shadowSm: 0 2px 4px rgba(0, 0, 0, 0.3);
+    --shadowLg: 0 10px 30px rgba(0, 0, 0, 0.5);
+    --radiusSm: 8px;
+    --transitionNormal: 0.3s ease;
+}
+
+/* Reset dan Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lexend', sans-serif;
+    background: var(--bgColor);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styles */
+header {
+    background: var(--primaryColor);
+    color: var(--textPrimary);
+    padding: 2rem;
+    text-align: center;
+    box-shadow: var(--shadowSm);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Container Flexbox - Layout Horizontal */
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+    flex: 1;
+}
+
+/* Sidebar Styles */
+.sidebar,
+.informasiTambahan {
+    flex: 1;
+    background: var(--bgColor);
+    padding: 2rem;
+    border-radius: var(--radiusSm);
+    box-shadow: var(--shadowLg);
+    border: 2px solid var(--accentColor);
+    position: sticky;
+    top: 2rem;
+    align-self: flex-start;
+    height: calc(100vh - 4rem);
+    overflow-y: auto;
+}
+
+.sidebar h2,
+.informasiTambahan h2 {
+    color: var(--textPrimary);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    border-bottom: 3px solid var(--accentColor);
+    padding-bottom: 0.5rem;
+}
+
+.sidebar p,
+.informasiTambahan p {
+    color: var(--textSecondary);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.sidebar ul,
+.informasiTambahan ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li,
+.informasiTambahan ul li {
+    margin-bottom: 0.8rem;
+}
+
+.sidebar ul li a,
+.informasiTambahan ul li a {
+    color: var(--accentColor);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    display: block;
+    border-radius: var(--radiusSm);
+    transition: all var(--transitionNormal);
+    background: var(--bgGray);
+}
+
+.sidebar ul li a:hover,
+.informasiTambahan ul li a:hover {
+    background: var(--bgGray);
+    color: var(--accentColor);
+    transform: translateX(5px);
+    border-radius: var(--radiusSm);
+    box-shadow: var(--shadowLg);
+    border-left: 2px solid var(--accentColor);
+}
+
+/* Konten Utama Styles */
+.kontenUtama {
+    flex: 2;
+    background: var(--bgColor);
+    padding: 2rem;
+    border-radius: var(--radiusSm);
+    box-shadow: var(--shadowLg);
+    border: 2px solid var(--primaryColor);
+}
+
+.kontenUtama h2 {
+    color: var(--textPrimary);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 3px solid var(--primaryColor);
+    padding-bottom: 0.5rem;
+}
+
+.kontenUtama p {
+    color: var(--textSecondary);
+    line-height: 1.8;
+    margin-bottom: 1.2rem;
+    text-align: justify;
+    font-size: 1.05rem;
+}
+
+.kontenUtama ol {
+    color: var(--textSecondary);
+    margin-left: 2rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+}
+
+.kontenUtama ol li {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+/* Quote Styles */
+q {
+    font-family: 'Courier New', monospace;
+    background: rgba(102, 126, 234, 0.1);
+    padding: 0.2rem 0.5rem;
+    border-radius: var(--radiusSm);
+    color: var(--primaryColor);
+    font-weight: 600;
+}
+
+/* Code Block Styles */
+code {
+    display: block;
+    background: var(--bgGray);
+    color: var(--textPrimary);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radiusSm);
+    margin: 1rem 0;
+    font-family: 'Courier New', monospace;
+    font-size: 0.95rem;
+    overflow-x: auto;
+}
+
+pre {
+    background: var(--bgColor);
+    color: var(--textSecondary);
+    padding: 1.5rem;
+    border-radius: var(--radiusSm);
+    overflow-x: auto;
+    margin: 1rem 0;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    border-left: 4px solid var(--primaryColor);
+}
+
+/* Image Styles */
+.kontenUtama img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radiusSm);
+    box-shadow: var(--shadowLg);
+    margin: 1rem 0;
+    display: block;
+}
+
+/* Footer Styles */
+footer {
+    background: var(--primaryColor);
+    color: var(--textPrimary);
+    text-align: center;
+    padding: 1.5rem;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: auto;
+}
+
+footer p {
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+
+/* Media Query - Layout Vertikal untuk layar ≤ 600px */
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .sidebar,
+    .kontenUtama,
+    .informasiTambahan {
+        width: 100%;
+        padding: 1.5rem;
+        position: static;
+        height: auto;
+    }
+
+    .sidebar h2,
+    .informasiTambahan h2 {
+        font-size: 1.5rem;
+    }
+
+    .kontenUtama h2 {
+        font-size: 1.6rem;
+    }
+
+    .kontenUtama p {
+        font-size: 1rem;
+    }
+}

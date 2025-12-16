@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Layout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Responsive Flexbox Layout</h1>
+        <p>Responsive Layout Menggunakan Flexbox</p>
+    </header>
+
+    <div class="container">
+        <div class="sidebar">
+            <h2>Sidebar</h2>
+            <p>Tugas lain:</p>
+            <ul>
+                <li><a href="../Soal 1/index.html">Soal 1</a></li>
+                <li><a href="../Soal 3/index.html">Soal 3</a></li>
+                <li><a href="../Soal 4/index.html">Soal 4</a></li>
+                <li><a href="../Soal 5/index.html">Soal 5</a></li>
+            </ul>
+        </div>
+
+        <div class="kontenUtama">
+            <h2>Cara membuat layout flexbox</h2>
+            <p>
+                Flexbox adalah metode layout pada CSS yang digunakan untuk mengatur elemen secara fleksibel dan
+                responsif.
+            </p>
+            <p>
+                Contoh kode flexbox:
+            </p>
+            <code>
+                HTML
+                <pre>
+        &lt;div class="container"&gt;
+            &lt;div class="box"&gt;Box 1&lt;/div&gt;
+            &lt;div class="box"&gt;Box 2&lt;/div&gt;
+            &lt;div class="box"&gt;Box 3&lt;/div&gt;
+        &lt;/div&gt;
+                </pre>
+            </code>
+            <code>
+                CSS
+                <pre>
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: #f2f2f2;
+            }
+
+        .box {
+            background: #4a90e2;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            flex-grow: 1;
+            margin: 0 10px;
+            text-align: center;
+        }
+                </pre>
+            </code>
+            <p>
+                Hasil:
+            </p>
+            <img src="flexbox.png" alt="Flexbox Layout">
+        </div>
+
+        <div class="informasiTambahan">
+            <h2>Informasi Tambahan</h2>
+            <p>Sumber:</p>
+            <ul>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout"
+                        target="_blank">MDN Web Docs</a></li>
+                <li><a href="https://www.w3schools.com/css/css3_flexbox.asp" target="_blank">W3Schools</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Flexbox Layout. Tugas Praktikum PBW.</p>
+    </footer>
+</body>
+
+</html>

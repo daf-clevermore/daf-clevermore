@@ -1,0 +1,259 @@
+/* CSS Variables */
+:root {
+    --primaryColor: #FF8F4C;
+    --primaryDark: #e67a38;
+    --accentColor: #5a9aa8;
+    --bgGray: #26282f;
+    --bgColor: #1d1e22;
+    --textPrimary: #F2F2F2;
+    --textSecondary: #c5c5c5;
+    --shadowSm: 0 2px 4px rgba(0, 0, 0, 0.3);
+    --shadowLg: 0 10px 30px rgba(0, 0, 0, 0.5);
+    --radiusSm: 8px;
+    --transitionNormal: 0.3s ease;
+}
+
+/* Reset dan Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lexend', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: var(--bgColor);
+    color: var(--textPrimary);
+}
+
+/* Header Styles */
+header {
+    background: var(--primaryColor);
+    color: var(--textPrimary);
+    padding: 2rem 1.5rem;
+    text-align: center;
+    box-shadow: var(--shadowLg);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Navigation Styles */
+nav {
+    background-color: var(--bgGray);
+    box-shadow: var(--shadowSm);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    display: block;
+    color: var(--textPrimary);
+    text-decoration: none;
+    padding: 1.2rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all var(--transitionNormal);
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: var(--primaryDark);
+    transition: all var(--transitionNormal);
+    transform: translateX(-50%);
+}
+
+nav ul li a:hover {
+    background-color: var(--accentColor);
+    color: var(--textPrimary);
+}
+
+nav ul li a:hover::after {
+    width: 80%;
+}
+
+nav ul li a:active {
+    background-color: var(--accentColor);
+    color: var(--textPrimary);
+}
+
+nav ul li a:active::after {
+    width: 80%;
+}
+
+/* Main Content Styles */
+main {
+    flex: 1;
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 5rem;
+}
+
+main section {
+    background: var(--bgGray);
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    border-radius: var(--radiusSm);
+    border-left: 5px solid var(--primaryColor);
+    box-shadow: var(--shadowLg);
+    opacity: 1;
+    transform: translateY(0);
+    transition: all var(--transitionNormal);
+}
+
+main h2 {
+    color: var(--textPrimary);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    border-left: 5px solid var(--accentColor);
+    padding-left: 1rem;
+}
+
+main p {
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: var(--textSecondary);
+    margin-bottom: 1.2rem;
+    text-align: justify;
+}
+
+/* List Styles */
+main ul {
+    margin: 1.5rem 0;
+    padding-left: 2rem;
+}
+
+main ul li {
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+    color: var(--textSecondary);
+    font-size: 1.05rem;
+}
+
+/* Link Styles */
+main a {
+    color: var(--primaryColor);
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    transition: all var(--transitionNormal);
+    border-bottom: 2px solid transparent;
+}
+
+main a:visited {
+    color: var(--primaryColor);
+}
+
+main a:hover,
+main a:visited:hover {
+    color: var(--accentColor);
+    border-bottom: 2px solid var(--accentColor);
+}
+
+main a:active {
+    color: var(--accentColor);
+}
+
+/* External Link Icon */
+main a[target="_blank"]::after {
+    content: ' ↗';
+    font-size: 0.9em;
+    opacity: 0.7;
+}
+
+/* Footer Styles */
+footer {
+    background: var(--primaryDark);
+    color: var(--textPrimary);
+    text-align: center;
+    padding: 1.5rem;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: auto;
+    width: 100%;
+}
+
+footer p {
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    nav ul li a {
+        padding: 1rem;
+        text-align: center;
+    }
+
+    main {
+        padding: 2rem 1rem;
+        padding-bottom: 5rem;
+    }
+
+    main section {
+        padding: 1.5rem;
+    }
+
+    main h2 {
+        font-size: 1.5rem;
+    }
+
+    main p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+
+    main section {
+        padding: 1rem;
+    }
+}
